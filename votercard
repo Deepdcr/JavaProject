@@ -1,0 +1,48 @@
+package entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="voter_tbl")
+public class VoterCard {
+	@Id
+	@GeneratedValue
+	@Column(name="voter_id")
+	private int voterId;
+	
+	@Column(name="votercard_no")
+	private int voterCardnumber;
+	
+	@Column(name="issuedby")
+	private String issuedBy;
+
+	public int getVoterId() {
+		return voterId;
+	}
+
+	public void setVoterId(int voterId) {
+		this.voterId = voterId;
+	}
+
+	public int getVoterCardnumber() {
+		return voterCardnumber;
+	}
+
+	public void setVoterCardnumber(int voterCardnumber) {
+		this.voterCardnumber = voterCardnumber;
+	}
+
+	public String getIssuedBy() {
+		return issuedBy;
+	}
+
+	public void setIssuedBy(String issuedBy) {
+		this.issuedBy = issuedBy;
+	}
+	
+	
+}

@@ -1,0 +1,51 @@
+package entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="adhar_tbl")
+public class AdharCard {
+	
+	@Id
+	@GeneratedValue
+	@Column(name="adhar_id")
+	private int adharId;
+	
+	@Column(name="adhar_no")
+	private int adharnumber;
+	
+	@Column(name="issuedby")
+	private String issuedBy;
+
+	public int getAdharId() {
+		return adharId;
+	}
+
+	public void setAdharId(int adharId) {
+		this.adharId = adharId;
+	}
+
+	public int getAdharnumber() {
+		return adharnumber;
+	}
+
+	public void setAdharnumber(int adharnumber) {
+		this.adharnumber = adharnumber;
+	}
+
+	public String getIssuedBy() {
+		return issuedBy;
+	}
+
+	public void setIssuedBy(String issuedBy) {
+		this.issuedBy = issuedBy;
+	}
+	
+	
+	
+	
+}

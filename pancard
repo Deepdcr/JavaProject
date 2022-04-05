@@ -1,0 +1,50 @@
+package entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="pan_tbl")
+public class Pancard {
+	
+	@Id
+	@GeneratedValue
+	@Column(name="pan_id")
+	private int panId;
+	
+	@Column(name="pan_no")
+	private String panCardNumber;
+	
+	@Column(name="issuedby")
+	private String issuedBy;
+
+	public int getPanId() {
+		return panId;
+	}
+
+	public void setPanId(int panId) {
+		this.panId = panId;
+	}
+
+	public String getPanCardNumber() {
+		return panCardNumber;
+	}
+
+	public void setPanCardNumber(String panCardNumber) {
+		this.panCardNumber = panCardNumber;
+	}
+
+	public String getIssuedBy() {
+		return issuedBy;
+	}
+
+	public void setIssuedBy(String issuedBy) {
+		this.issuedBy = issuedBy;
+	}
+
+	
+	
+}
